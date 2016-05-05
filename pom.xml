@@ -13,6 +13,7 @@
         <kotlin.version>1.0.1-2</kotlin.version>
         <jackson.version>2.7.3</jackson.version>
         <fuel.version>1.1.2</fuel.version>
+        <logback.version>1.1.7</logback.version>
     </properties>
 
     <dependencies>
@@ -35,6 +36,11 @@
             <groupId>com.github.kittinunf.result</groupId>
             <artifactId>result</artifactId>
             <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
         </dependency>
 
         <dependency>
