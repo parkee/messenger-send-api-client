@@ -25,7 +25,14 @@ class GenericTemplateElementButtonsStep(private val title: String,
     }
 
     fun finishAddingButtons(): GenericTemplateStep {
-        val element = Element(title = title, subtitle = subtitle, itemUrl = itemUrl, imageUrl = imageUrl, buttons = buttons)
+
+        val element = Element(
+                title = title,
+                subtitle = subtitle,
+                itemUrl = itemUrl,
+                imageUrl = imageUrl,
+                buttons = if (buttons.isNotEmpty()) buttons else null
+        )
         genericTemplateStep.elements.add(element)
         return genericTemplateStep
     }

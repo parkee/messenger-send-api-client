@@ -24,7 +24,13 @@ class GenericTemplateLastElementButtonsStep internal constructor(private val tit
     }
 
     fun finishAddingButtons(): FinalStep {
-        val element = Element(title = title, subtitle = subtitle, itemUrl = itemUrl, imageUrl = imageUrl, buttons = buttons)
+        val element = Element(
+                title = title,
+                subtitle = subtitle,
+                itemUrl = itemUrl,
+                imageUrl = imageUrl,
+                buttons = if (buttons.isNotEmpty()) buttons else null
+        )
         genericTemplateStep.elements.add(element)
         val payload = RequestPayload(templateType = TemplateType.GENERIC, elements = genericTemplateStep.elements)
         val attachmentType = RequestAttachmentType.TEMPLATE

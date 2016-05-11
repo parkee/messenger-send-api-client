@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class FacebookError(
-        @JsonProperty("message") val message: String,
-        @JsonProperty("type") val type: String,
-        @JsonProperty("code") val code: Int,
-        @JsonProperty("error_data") val errorData: String,
-        @JsonProperty("fbtrace_id") val facebookTraceId: String
+        @JsonProperty("message") val message: String? = null,
+        @JsonProperty("type") val type: String? = null,
+        @JsonProperty("code") val code: Int? = null,
+        @JsonProperty("error_data") val errorData: String? = null,
+        @JsonProperty("fbtrace_id") val facebookTraceId: String? = null
 )
