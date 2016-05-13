@@ -17,7 +17,7 @@ enum class AttachmentType(private val type: String) {
 
     @JsonValue
     override fun toString(): String{
-        return "AttachmentType(type='$type')"
+        return type
     }
 
 
