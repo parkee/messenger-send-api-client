@@ -1,6 +1,9 @@
 package com.github.parkee.messenger.model.request
 
-import com.fasterxml.jackson.annotation.*
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonInclude
+import com.fasterxml.jackson.annotation.JsonProperty
+import com.github.parkee.messenger.model.request.senderaction.SenderAction
 
 /**
  * Created by parkee on 4/27/16.
@@ -14,19 +17,3 @@ data class FacebookRequest(
         @JsonProperty("sender_action") val senderAction: SenderAction? = null
 )
 
-enum class SenderAction(private val actionName: String) {
-    MARK_SEEN("mark_seen"),
-    TYPING_ON("mark_seen"),
-    TYPING_OFF("mark_seen");
-
-    @JsonCreator
-    fun fromString(actionName: String?): RequestAttachmentType? {
-        actionName ?: return null
-        return RequestAttachmentType.valueOf(actionName)
-    }
-
-    @JsonValue
-    override fun toString(): String{
-        return actionName
-    }
-}

@@ -9,5 +9,5 @@ import com.fasterxml.jackson.annotation.JsonProperty
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class SendMessageResponse(
         @JsonProperty("recipient_id") val recipientId: String,
-        @JsonProperty("message_id") val messageId: String
+        @JsonProperty("message_id") val messageId: String? = null
 )

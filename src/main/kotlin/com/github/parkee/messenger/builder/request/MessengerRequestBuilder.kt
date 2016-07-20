@@ -1,6 +1,7 @@
 package com.github.parkee.messenger.builder.request
 
 import com.github.parkee.messenger.model.request.*
+import com.github.parkee.messenger.model.request.senderaction.SenderAction
 
 /**
  * Created by parkee on 4/29/16.
