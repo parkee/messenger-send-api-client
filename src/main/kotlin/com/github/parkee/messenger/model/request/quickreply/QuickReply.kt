@@ -11,7 +11,7 @@ import com.github.parkee.messenger.builder.message.quickreply.ContentType
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 data class QuickReply(
-        @JsonProperty("content_type", required = true) val contentType: ContentType,
-        @JsonProperty("title", required = true) val title: String,
+        @JsonProperty("content_type") val contentType: ContentType? = ContentType.TEXT,
+        @JsonProperty("title") val title: String? = null,
         @JsonProperty("payload", required = true) val payload: Any
 )

@@ -16,4 +16,3 @@ data class FacebookRequest(
         @JsonProperty("notification_type") val notificationType: NotificationType?,
         @JsonProperty("sender_action") val senderAction: SenderAction? = null
 )
-
